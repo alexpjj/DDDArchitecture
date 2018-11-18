@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Entities\Base\Entity.cs" />
     <Compile Include="Entities\Base\ValueObject.cs" />
+    <Compile Include="Entities\Content.cs" />
+    <Compile Include="Entities\Course.cs" />
     <Compile Include="Entities\Email.cs" />
     <Compile Include="Entities\PersonalEmail.cs" />
     <Compile Include="Entities\ELearnEmail.cs" />
