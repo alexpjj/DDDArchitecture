@@ -40,7 +40,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IApplicationService.cs" />
+    <Compile Include="Contracts\IStudentService.cs" />
+    <Compile Include="DTO\CreateStudentDto.cs" />
+    <Compile Include="DTO\UpdateStudentDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\StudentService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+    <Folder Include="Factories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eLearn.Domain\eLearn.Domain.csproj">
+      <Project>{4FD3B776-F45E-4B4E-8471-3B919C87AF5E}</Project>
+      <Name>eLearn.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
