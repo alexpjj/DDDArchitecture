@@ -8,5 +8,9 @@ namespace eLearn.Application.DTO
 {
     public class CreateStudentDto
     {
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Lastname { get; set; }
+        public string Email { get; set; }
     }
 }
