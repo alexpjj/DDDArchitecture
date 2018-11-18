@@ -48,6 +48,7 @@
     <Compile Include="Entities\Email.cs" />
     <Compile Include="Entities\PersonalEmail.cs" />
     <Compile Include="Entities\ELearnEmail.cs" />
+    <Compile Include="Entities\Student.cs" />
     <Compile Include="Entities\Teacher.cs" />
     <Compile Include="Exceptions\ELearnEmailValidationException.cs" />
     <Compile Include="Exceptions\PersonalEmailValidationException.cs" />

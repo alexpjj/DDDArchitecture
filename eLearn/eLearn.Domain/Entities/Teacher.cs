@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eLearn.Domain.Entities
 {
-    public class Teacher : Base.Entity
+    public sealed class Teacher : Base.Entity
     {
         public PersonalEmail PersonalEmail { get; }
         public ELearnEmail ProfessionalEmail { get; }
