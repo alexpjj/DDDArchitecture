@@ -21,7 +21,8 @@ namespace eLearn.Domain.TDD.Entities
             PersonalEmail personalEmail;
 
             personalEmail = new PersonalEmail(email);
-
+            
+            PersonalEmail.IsValid(email).Should().Be(true);
             personalEmail.ElectronicAdress.Should().Be(email);
         }
 
@@ -32,8 +33,9 @@ namespace eLearn.Domain.TDD.Entities
         public void ShoudlNotBeValid(string email)
         {
             Action action = () => new PersonalEmail(email);
-            
-            action.Should().Throw<Exceptions.PersonalEmailException>(email);
+
+            PersonalEmail.IsValid(email).Should().Be(false);
+            action.Should().Throw<Exceptions.PersonalEmailValidationException>(email);
         }
     }
 }

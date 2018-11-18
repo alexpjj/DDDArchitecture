@@ -7,18 +7,20 @@ using System.Threading.Tasks;
 
 namespace eLearn.Domain.Entities
 {
-    public sealed class PersonalEmail : Base.ValueObject<PersonalEmail>
+    public sealed class PersonalEmail : Email
     {
-        public string ElectronicAdress { get; }
-
-
-        public PersonalEmail(string electronicAdress)
+        public PersonalEmail(string electronicAdress) : base(electronicAdress)
         {
-            this.ElectronicAdress = Regex.IsMatch(electronicAdress, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase)
-                ? electronicAdress : throw new Exceptions.PersonalEmailException();
+            this.ElectronicAdress = Validate(electronicAdress)
+                ? electronicAdress : throw new Exceptions.PersonalEmailValidationException();
+        }
+        
+        public static bool IsValid(string electronicAdress)
+        {
+            return Email.Validate(electronicAdress);
         }
 
-        protected override bool EqualsCore(PersonalEmail other)
+        protected override bool EqualsCore(Email other)
         {
             return this.ElectronicAdress == other.ElectronicAdress;   
         }

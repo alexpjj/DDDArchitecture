@@ -8,7 +8,8 @@ namespace eLearn.Domain.Entities
 {
     public class Teacher : Base.Entity
     {
-        public PersonalEmail PersonalEmail { get; }        
+        public PersonalEmail PersonalEmail { get; }
+        public ELearnEmail ProfessionalEmail { get; }
         public string Name { get; }
         public string Surname { get; }
         public string Lastname { get; }       

@@ -45,9 +45,12 @@
   <ItemGroup>
     <Compile Include="Entities\Base\Entity.cs" />
     <Compile Include="Entities\Base\ValueObject.cs" />
+    <Compile Include="Entities\Email.cs" />
     <Compile Include="Entities\PersonalEmail.cs" />
+    <Compile Include="Entities\ELearnEmail.cs" />
     <Compile Include="Entities\Teacher.cs" />
-    <Compile Include="Exceptions\PersonalEmailException.cs" />
+    <Compile Include="Exceptions\ELearnEmailValidationException.cs" />
+    <Compile Include="Exceptions\PersonalEmailValidationException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
