@@ -1,5 +1,4 @@
-﻿using Castle.Core.Interceptor;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +6,7 @@ using System.Threading.Tasks;
 using log4net;
 using eLearn.Application.IoC.Serializer;
 using System.Reflection;
+using Castle.DynamicProxy;
 
 namespace eLearn.Application.IoC.Interceptors
 {
