@@ -8,7 +8,7 @@ namespace eLearn.Domain.Entities.Base
 {
     public abstract class Entity
     {
-        public long Id { get; private set; }
+        public long Id { get; protected set; }
 
         public override bool Equals(object obj)
         {
