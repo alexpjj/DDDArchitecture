@@ -12,7 +12,9 @@ namespace eLearn.Domain.Entities
         public ELearnEmail ProfessionalEmail { get; }
         public string Name { get; }
         public string Surname { get; }
-        public string Lastname { get; }       
+        public string Lastname { get; }
+
+        public virtual ContentCreatorRequest Request { get; private set; }
 
         public virtual IEnumerable<Course> Courses { get; set; }
 
@@ -32,6 +34,19 @@ namespace eLearn.Domain.Entities
             this.Lastname = lastname;
             this.PersonalEmail = new PersonalEmail(personalEmail);
             this.Courses = new List<Course>();
+        }
+
+        public void CreateRequest(string petitionDescription)
+        {
+            if (this.HasRequest())
+                throw new InvalidOperationException("User already has a request in process");
+
+            this.Request = new ContentCreatorRequest(this.Id, petitionDescription);            
+        }
+
+        public bool HasRequest()
+        {
+            return this.Request != null;
         }
     }
 }

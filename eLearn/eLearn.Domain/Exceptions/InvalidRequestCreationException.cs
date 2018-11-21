@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eLearn.Domain.Enums
+namespace eLearn.Domain.Exceptions
 {
-    public enum RequestStatus
+    public class InvalidRequestCreationException : Exception
     {
-        Accepted,
-        Declined,
-        InProgress
     }
 }

@@ -12,10 +12,22 @@ namespace eLearn.Domain.Entities
     {
         public RequestStatus Status { get; }
         public long ContentCreatorId { get; }
-        public long ValidatorId { get; }
+        public string PetitionDescription { get; }
+        public long? ValidatorId { get; }
         public string ValidationDescription { get; }
 
-        private ContentCreatorRequest(RequestStatus status, int contentCreatorId, int validatorId, string validationDescription)
+        public ContentCreatorRequest(long contentCreatorId, string petitionDescription)
+        {
+            if (string.IsNullOrWhiteSpace(petitionDescription))
+                throw new InvalidRequestCreationException();
+
+            this.ContentCreatorId = contentCreatorId;
+            this.PetitionDescription = petitionDescription;
+            this.Status = RequestStatus.InProgress;
+            //TODO add timespan last update date
+        }
+
+        private ContentCreatorRequest(RequestStatus status, long contentCreatorId, long? validatorId, string validationDescription)
         {
             this.Status = status;
             this.ContentCreatorId = contentCreatorId;
@@ -23,18 +35,19 @@ namespace eLearn.Domain.Entities
             this.ValidationDescription = validationDescription;
         }
 
-        public static ContentCreatorRequest AcceptedRequest(int contentCreatorId, int validatorId, string validationDescription = "")
+        protected static ContentCreatorRequest AcceptedRequest(long contentCreatorId, long validatorId, string validationDescription = "")
         {
             return new ContentCreatorRequest(RequestStatus.Accepted, contentCreatorId, validatorId, validationDescription);
         }
 
-        public static ContentCreatorRequest DeclinedRequest(int contentCreatorId, int validatorId, string validationDescription)
+        protected static ContentCreatorRequest DeclinedRequest(long contentCreatorId, long validatorId, string validationDescription)
         {
             if (string.IsNullOrWhiteSpace(validationDescription))
                 throw new InvalidDeclinedRequestException();
 
             return new ContentCreatorRequest(RequestStatus.Declined, contentCreatorId, validatorId, validationDescription);
         }
+        
 
         protected override bool EqualsCore(ContentCreatorRequest other)
         {
@@ -43,7 +56,8 @@ namespace eLearn.Domain.Entities
 
         protected override int GetHashCodeCore()
         {
-            return (this.ContentCreatorId.ToString() + this.ValidatorId.ToString()).GetHashCode();
+            var validator = this.ValidatorId.HasValue ? this.ValidatorId.ToString() : string.Empty;
+            return (this.ContentCreatorId.ToString() + validator).GetHashCode();
         }
     }
 }

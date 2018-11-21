@@ -61,6 +61,7 @@
     <Compile Include="Enums\ValidationStatusType.cs" />
     <Compile Include="Exceptions\ELearnEmailValidationException.cs" />
     <Compile Include="Exceptions\InvalidDeclinedRequestException.cs" />
+    <Compile Include="Exceptions\InvalidRequestCreationException.cs" />
     <Compile Include="Exceptions\PersonalEmailValidationException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
