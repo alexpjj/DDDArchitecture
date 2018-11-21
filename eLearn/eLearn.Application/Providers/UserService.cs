@@ -9,18 +9,18 @@ using eLearn.Domain.Entities;
 
 namespace eLearn.Application.Providers
 {
-    public class StudentService : Contracts.IStudentService
+    public class UserService : Contracts.IUserService
     {
-        private readonly IStudentRepository studentRepository;
+        private readonly IUserRepository studentRepository;
 
-        public StudentService(IStudentRepository studentRepository)
+        public UserService(IUserRepository studentRepository)
         {
             this.studentRepository = studentRepository;
         }
 
-        public async Task<long> Create(CreateStudentDto studentDto)
+        public async Task<long> Create(CreateUserDto studentDto)
         {
-            var student = new Student(studentDto.Name, studentDto.Surname, studentDto.Lastname, studentDto.Email);
+            var student = new User(studentDto.Name, studentDto.Surname, studentDto.Lastname, studentDto.Email);
 
             this.studentRepository.Create(student);
             await this.studentRepository.IUnitOfWork.CommitAsync().ConfigureAwait(false);
@@ -33,7 +33,7 @@ namespace eLearn.Application.Providers
             throw new NotImplementedException();
         }
 
-        public Task Update(long id, UpdateStudentDto studentDto)
+        public Task Update(long id, UpdateUserDto studentDto)
         {
             throw new NotImplementedException();
         }

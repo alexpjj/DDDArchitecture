@@ -28,7 +28,7 @@ namespace eLearn.Application.TDD.Providers
             this.fixture = new Fixture();
 
             this.Mock<Domain.Core.IUnitOfWork>().Setup(x => x.CommitAsync()).Returns(Task.CompletedTask);
-            this.Mock<IStudentRepository>().Setup(x => x.IUnitOfWork).Returns(this.Mock<IUnitOfWork>().Object);
+            this.Mock<IUserRepository>().Setup(x => x.IUnitOfWork).Returns(this.Mock<IUnitOfWork>().Object);
 
             this.Configure();
 

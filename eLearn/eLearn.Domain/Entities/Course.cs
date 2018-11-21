@@ -11,7 +11,7 @@ namespace eLearn.Domain.Entities
         public string Description { get; } 
         public Content Content { get; }
 
-        public virtual IEnumerable<Teacher> Teachers { get; set; }
-        public virtual IEnumerable<Student> Students { get; set; }
+        public virtual IEnumerable<ContentCreator> Teachers { get; set; }
+        public virtual IEnumerable<User> Students { get; set; }
     }
 }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace eLearn.Application.Contracts
 {
-    public interface IStudentService : IApplicationService
+    public interface IUserService : IApplicationService
     {
-        Task<long> Create(DTO.CreateStudentDto studentDto);
-        Task Update(long id, DTO.UpdateStudentDto studentDto);
+        Task<long> Create(DTO.CreateUserDto studentDto);
+        Task Update(long id, DTO.UpdateUserDto studentDto);
         Task Delete(long id);
     }
 }   

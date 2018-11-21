@@ -22,10 +22,10 @@ namespace eLearn.Application.IoC.Modules
 
         protected override void Load(ContainerBuilder builder)
         {
-            Assembly providersAssembly = typeof(DTO.CreateStudentDto).Assembly;
+            Assembly providersAssembly = typeof(DTO.CreateUserDto).Assembly;
 
             builder.RegisterAssemblyTypes(providersAssembly)
-               .Where(x => typeof(Providers.StudentService).IsAssignableFrom(x))
+               .Where(x => typeof(Providers.UserService).IsAssignableFrom(x))
                .EnableInterfaceInterceptors()
                .InterceptedBy(typeof(Interceptors.Logger))
                .OnPreparing(x =>

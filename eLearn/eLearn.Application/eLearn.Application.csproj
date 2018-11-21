@@ -41,11 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IApplicationService.cs" />
-    <Compile Include="Contracts\IStudentService.cs" />
-    <Compile Include="DTO\CreateStudentDto.cs" />
-    <Compile Include="DTO\UpdateStudentDto.cs" />
+    <Compile Include="Contracts\IUserService.cs" />
+    <Compile Include="DTO\CreateUserDto.cs" />
+    <Compile Include="DTO\UpdateUserDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Providers\StudentService.cs" />
+    <Compile Include="Providers\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Exceptions\" />

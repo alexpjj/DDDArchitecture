@@ -3,35 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using eLearn.Domain.Entities;
 
 namespace eLearn.Domain.Entities
 {
-    public class Teacher : Base.Entity
+    public sealed class User : Base.Entity
     {
-        public PersonalEmail PersonalEmail { get; }
-        public ELearnEmail ProfessionalEmail { get; }
         public string Name { get; }
         public string Surname { get; }
-        public string Lastname { get; }       
+        public string Lastname { get; }
+        public PersonalEmail PersonalEmail { get; }
+        public ELearnEmail ELearnEmail { get; }
 
-        public virtual IEnumerable<Course> Courses { get; set; }
-
-        public Teacher(string name, string surname, string lastname, PersonalEmail personalEmail)
+        public User(string name, string surname, string lastname, PersonalEmail personalEmail)
         {
             this.Name = name;
             this.Surname = surname;
             this.Lastname = lastname;
             this.PersonalEmail = personalEmail;
-            this.Courses = new List<Course>();
         }
 
-        public Teacher(string name, string surname, string lastname, string personalEmail)
+        public User(string name, string surname, string lastname, string personalEmail)
         {
             this.Name = name;
             this.Surname = surname;
             this.Lastname = lastname;
             this.PersonalEmail = new PersonalEmail(personalEmail);
-            this.Courses = new List<Course>();
         }
     }
 }

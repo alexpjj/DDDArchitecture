@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\Repositories\IStudentRepository.cs" />
+    <Compile Include="Contracts\Repositories\IUserRepository.cs" />
     <Compile Include="Core\IRepository.cs" />
     <Compile Include="Core\IUnitOfWork.cs" />
     <Compile Include="Core\IUnitOfWorkTransaction.cs" />
@@ -55,8 +55,8 @@
     <Compile Include="Entities\Email.cs" />
     <Compile Include="Entities\PersonalEmail.cs" />
     <Compile Include="Entities\ELearnEmail.cs" />
-    <Compile Include="Entities\Student.cs" />
-    <Compile Include="Entities\Teacher.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\ContentCreator.cs" />
     <Compile Include="Exceptions\ELearnEmailValidationException.cs" />
     <Compile Include="Exceptions\PersonalEmailValidationException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

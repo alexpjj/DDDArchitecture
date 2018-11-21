@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eLearn.Application.DTO
 {
-    public class CreateStudentDto
+    public class CreateUserDto
     {
         public string Name { get; set; }
         public string Surname { get; set; }

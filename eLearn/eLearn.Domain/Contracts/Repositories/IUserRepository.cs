@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eLearn.Domain.Contracts.Repositories
 {
-    public interface IStudentRepository : Core.IRepository<Student, int>
+    public interface IUserRepository : Core.IRepository<User, int>
     {
     }
 }

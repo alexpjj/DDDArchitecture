@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eLearn.Application.DTO
 {
-    public class UpdateStudentDto
+    public class UpdateUserDto
     {
     }
 }

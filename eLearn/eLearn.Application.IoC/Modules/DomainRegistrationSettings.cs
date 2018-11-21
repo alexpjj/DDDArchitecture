@@ -19,7 +19,7 @@ namespace eLearn.Application.IoC.Modules
 
         protected override void Load(ContainerBuilder builder)
         {
-            Assembly assembly = typeof(Domain.Contracts.Repositories.IStudentRepository).Assembly;
+            Assembly assembly = typeof(Domain.Contracts.Repositories.IUserRepository).Assembly;
             
             base.Load(builder);
         }
