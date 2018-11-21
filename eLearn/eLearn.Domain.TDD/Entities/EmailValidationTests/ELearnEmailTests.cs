@@ -7,7 +7,7 @@ using NUnit.Framework;
 using FluentAssertions;
 using eLearn.Domain.Entities;
 
-namespace eLearn.Domain.TDD.Entities.EmailValidation
+namespace eLearn.Domain.TDD.Entities.EmailValidationTests
 {
     [TestFixture]
     public class ELearnEmailTests

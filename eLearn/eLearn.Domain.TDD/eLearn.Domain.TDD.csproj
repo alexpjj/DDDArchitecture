@@ -52,8 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\EmailValidation\ELearnEmailTests.cs" />
-    <Compile Include="Entities\EmailValidation\PersonalEmailTests.cs" />
+    <Compile Include="Entities\ContentCreatorRequestTests\ContentCreatorTests.cs" />
+    <Compile Include="Entities\EmailValidationTests\ELearnEmailTests.cs" />
+    <Compile Include="Entities\EmailValidationTests\PersonalEmailTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

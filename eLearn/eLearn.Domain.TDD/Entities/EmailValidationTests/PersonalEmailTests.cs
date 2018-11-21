@@ -8,7 +8,7 @@ using eLearn.Domain.Entities;
 using FluentAssertions;
 using eLearn.Domain;
 
-namespace eLearn.Domain.TDD.Entities
+namespace eLearn.Domain.TDD.Entities.EmailValidationTests
 {
     [TestFixture]
     public class PersonalEmailTests
