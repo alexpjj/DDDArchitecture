@@ -12,6 +12,10 @@ using System.Threading;
 
 namespace eLearn.Infrastucture.Extensions
 {
+    /// <summary>
+    /// Microsoft provided class. It allows dynamic string based querying. 
+    /// Very handy when, at compile time, you don't know the type of queries that will be generated.
+    /// </summary>
     [ExcludeFromCodeCoverage]
     public static class DynamicQueryable
     {

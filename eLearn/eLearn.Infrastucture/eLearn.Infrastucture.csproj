@@ -36,6 +36,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="LinqKit, Version=1.1.15.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqKit.1.1.15\lib\net45\LinqKit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -50,13 +53,14 @@
     <Compile Include="Context\ContextUnitOfWork.cs" />
     <Compile Include="Context\ContextUnitOfWorkTransaction.cs" />
     <Compile Include="Contracts\IQueryableUnitOfWork.cs" />
+    <Compile Include="Core\Repository.cs" />
     <Compile Include="Extensions\DynamicLinq.cs" />
+    <Compile Include="Extensions\LinqExtensions.cs" />
     <Compile Include="Migration\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Configuration\" />
-    <Folder Include="Core\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
   <ItemGroup>
