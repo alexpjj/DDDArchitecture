@@ -106,7 +106,7 @@ namespace eLearn.Infrastucture.Core
                 .Select(select)
                 .ToListAsync();
         }
-        /*
+        
         public Task<List<TEntity>> GetAllByFuncAsync(bool isTrackeable, Func<TEntity, bool> expression, params Expression<Func<TEntity, object>>[] includeReferences)
         {
             IQueryable<TEntity> query = this.GetSet().AsQueryable();
@@ -117,9 +117,9 @@ namespace eLearn.Infrastucture.Core
             if (includeReferences != null && includeReferences.Length > 0)
                 query = includeReferences.Aggregate(query, System.Data.Entity.QueryableExtensions.Include);
 
-            return query.AsExpandable().Where(expression).();
+            return query.AsExpandable().Where(expression).AsQueryable().ToListAsync();
         }
-        */
+        
         public Task<TEntity> GetByIdAsync(TId id)
         {
             return (this.GetSet() as DbSet<TEntity>).FindAsync(id);
