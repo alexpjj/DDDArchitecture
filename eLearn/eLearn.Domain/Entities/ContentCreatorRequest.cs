@@ -10,13 +10,14 @@ namespace eLearn.Domain.Entities
 {
     public class ContentCreatorRequest : Base.ValueObject<ContentCreatorRequest>
     {
-        public RequestStatus Status { get; }
-        public long ContentCreatorId { get; }
-        public string PetitionDescription { get; }
-        public long? ValidatorId { get; }
-        public string ValidationDescription { get; }
+        public RequestStatus Status { get; private set; }
+        public long ContentCreatorId { get; private set; }
+        public string PetitionDescription { get; private set; }
+        public long? ValidatorId { get; private set; }
+        public string ValidationDescription { get; set; }
 
-        public ContentCreatorRequest(long contentCreatorId, string petitionDescription)
+
+        protected ContentCreatorRequest(long contentCreatorId, string petitionDescription)
         {
             if (string.IsNullOrWhiteSpace(petitionDescription))
                 throw new InvalidRequestCreationException();
@@ -26,26 +27,21 @@ namespace eLearn.Domain.Entities
             this.Status = RequestStatus.InProgress;
             //TODO add timespan last update date
         }
-
-        private ContentCreatorRequest(RequestStatus status, long contentCreatorId, long? validatorId, string validationDescription)
+     
+        protected void AcceptRequest(long validatorId, string validationDescription = "")
         {
-            this.Status = status;
-            this.ContentCreatorId = contentCreatorId;
             this.ValidatorId = validatorId;
-            this.ValidationDescription = validationDescription;
+            this.ValidationDescription = ValidationDescription;
         }
 
-        protected static ContentCreatorRequest AcceptedRequest(long contentCreatorId, long validatorId, string validationDescription = "")
-        {
-            return new ContentCreatorRequest(RequestStatus.Accepted, contentCreatorId, validatorId, validationDescription);
-        }
-
-        protected static ContentCreatorRequest DeclinedRequest(long contentCreatorId, long validatorId, string validationDescription)
+        protected void DeclinedRequest(long contentCreatorId, long validatorId, string validationDescription)
         {
             if (string.IsNullOrWhiteSpace(validationDescription))
                 throw new InvalidDeclinedRequestException();
 
-            return new ContentCreatorRequest(RequestStatus.Declined, contentCreatorId, validatorId, validationDescription);
+            this.Status = RequestStatus.Declined;
+            this.ValidatorId = ValidatorId;
+            this.ValidationDescription = validationDescription;
         }
         
 

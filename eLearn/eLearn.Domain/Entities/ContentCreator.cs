@@ -41,7 +41,7 @@ namespace eLearn.Domain.Entities
             if (this.HasRequest())
                 throw new InvalidOperationException("User already has a request in process");
 
-            this.Request = new ContentCreatorRequest(this.Id, petitionDescription);            
+            //this.Request = new ContentCreatorRequest(this.Id, petitionDescription);            
         }
 
         public bool HasRequest()
