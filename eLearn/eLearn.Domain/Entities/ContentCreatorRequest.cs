@@ -17,24 +17,24 @@ namespace eLearn.Domain.Entities
         public string ValidationDescription { get; set; }
 
 
-        protected ContentCreatorRequest(long contentCreatorId, string petitionDescription)
+        public ContentCreatorRequest(long contentCreatorId, string petitionDescription)
         {
             if (string.IsNullOrWhiteSpace(petitionDescription))
                 throw new InvalidRequestCreationException();
 
+            this.Status = RequestStatus.InProgress;
             this.ContentCreatorId = contentCreatorId;
             this.PetitionDescription = petitionDescription;
-            this.Status = RequestStatus.InProgress;
-            //TODO add timespan last update date
         }
      
-        protected void AcceptRequest(long validatorId, string validationDescription = "")
+        public void AcceptRequest(long validatorId, string validationDescription = "")
         {
+            this.Status = RequestStatus.Accepted;
             this.ValidatorId = validatorId;
             this.ValidationDescription = ValidationDescription;
         }
 
-        protected void DeclinedRequest(long contentCreatorId, long validatorId, string validationDescription)
+        public void DeclinedRequest(long contentCreatorId, long validatorId, string validationDescription)
         {
             if (string.IsNullOrWhiteSpace(validationDescription))
                 throw new InvalidDeclinedRequestException();

@@ -9,11 +9,25 @@ using FluentAssertions;
 using eLearn.Domain.Enums;
 using eLearn.Domain.Exceptions;
 
-namespace eLearn.Domain.TDD.Entities.ContentCreatorRequestTests
+namespace eLearn.Domain.TDD.Entities.ContentCreatorTests
 {
     [TestFixture]
-    public class ContentCreatorTests
+    public class ContentCreatorRequestTests : TestBase
     {
+        [Test]
+        public void ShouldCreateARequest()
+        {
+            /*var contentCreator = this.Create<ContentCreator>();
+            string petition = "Pls pls pls pls";
+
+            contentCreator.CreateRequest(petition);
+
+            contentCreator.Request.Should().NotBeNull();
+            contentCreator.Request.Status.Should().Be(RequestStatus.InProgress);
+            contentCreator.Request.PetitionDescription.Should().Be(petition);
+            contentCreator.Request.ContentCreatorId.Should().Be(contentCreator.Id);*/
+        }
+
         [Test]
         public void ShouldCreateAnAcceptedContentCreatorRequest()
         {

@@ -42,6 +42,7 @@ namespace eLearn.Application.TDD.Providers
 
         protected virtual void Configure()
         {
+            
         }
 
         protected Moq.Mock<TDependency> Mock<TDependency>() where TDependency : class
