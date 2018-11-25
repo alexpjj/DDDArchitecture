@@ -52,7 +52,7 @@
     <Compile Include="Entities\Base\ValueObject.cs" />
     <Compile Include="Entities\Content.cs" />
     <Compile Include="Entities\ContentCreatorRequest.cs" />
-    <Compile Include="Entities\ContentValidator.cs" />
+    <Compile Include="Entities\ElearnValidator.cs" />
     <Compile Include="Entities\Course.cs" />
     <Compile Include="Entities\Email.cs" />
     <Compile Include="Entities\PersonalEmail.cs" />

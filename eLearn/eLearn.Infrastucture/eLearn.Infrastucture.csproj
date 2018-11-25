@@ -50,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\ContentCreatorEntityConfiguration.cs" />
+    <Compile Include="Configuration\ContentCreatorRequestEntityConfiguration.cs" />
+    <Compile Include="Configuration\ElearnValidatorEntityConfiguration.cs" />
     <Compile Include="Context\ContextUnitOfWork.cs" />
     <Compile Include="Context\ContextUnitOfWorkTransaction.cs" />
     <Compile Include="Contracts\IQueryableUnitOfWork.cs" />
@@ -60,7 +63,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Configuration\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
   <ItemGroup>

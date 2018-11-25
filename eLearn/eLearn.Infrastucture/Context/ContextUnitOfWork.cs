@@ -1,4 +1,5 @@
 ﻿using eLearn.Domain.Core;
+using eLearn.Infrastucture.Configuration;
 using eLearn.Infrastucture.CrossCutting.Exceptions;
 using eLearn.Infrastucture.Migration;
 using System;
@@ -24,8 +25,9 @@ namespace eLearn.Infrastucture.Context
 
         public ContextUnitOfWork(string name) : base(name)
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<ContextUnitOfWork, Configuration>(name));
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<ContextUnitOfWork, Configuration>(name));
 
+            Database.SetInitializer<ContextUnitOfWork>(new DropCreateDatabaseIfModelChanges<ContextUnitOfWork>());//For development, TODO inject configuration to dynamically change it
             this.ConfigureDebug();
         }
 
@@ -67,6 +69,8 @@ namespace eLearn.Infrastucture.Context
         {
             modelBuilder.Properties<string>()
                 .Configure(x => x.HasMaxLength(150));
+
+            modelBuilder.Configurations.AddFromAssembly(typeof(ContentCreatorEntityConfiguration).Assembly);
 
             base.OnModelCreating(modelBuilder);
         }

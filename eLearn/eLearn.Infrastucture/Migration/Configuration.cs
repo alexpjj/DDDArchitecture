@@ -15,7 +15,7 @@ namespace eLearn.Infrastucture.Migration
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = false;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(ContextUnitOfWork context)
