@@ -18,7 +18,7 @@ namespace eLearn.Infrastucture.Context
     {
         private ContextUnitOfWorkTransaction currentTransaction;
 
-        public ContextUnitOfWork() : base("therapeuticPlanSQL")
+        public ContextUnitOfWork() : base("eLearn")
         {
         }
 
@@ -67,8 +67,6 @@ namespace eLearn.Infrastucture.Context
         {
             modelBuilder.Properties<string>()
                 .Configure(x => x.HasMaxLength(150));
-
-            //TODO add configurations from assembly (no configurations at this point)
 
             base.OnModelCreating(modelBuilder);
         }

@@ -59,9 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\AutoFixture\EmailAdressCustomization.cs" />
-    <Compile Include="Configuration\AutoFixture\EmailAdressSpecimen.cs" />
-    <Compile Include="Entities\ContentCreatorTests\ContentCreatorRequestTests.cs" />
+    <Compile Include="Entities\ContentCreatorRequestTests\ContentCreatorRequestTests.cs" />
     <Compile Include="Entities\EmailValidationTests\ELearnEmailTests.cs" />
     <Compile Include="Entities\EmailValidationTests\PersonalEmailTests.cs" />
     <Compile Include="Entities\TestBase.cs" />
@@ -78,6 +76,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration\AutoFixture\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

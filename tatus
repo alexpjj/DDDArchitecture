@@ -1,0 +1,137 @@
+[33mcommit b646d50e656e4ba57d642f985caa90dbad070c1b[m[33m ([m[1;36mHEAD -> [m[1;32mautofixture-customization[m[33m, [m[1;31morigin/autofixture-customization[m[33m)[m
+Author: Alex <alex.penin@grupoica.com>
+Date:   Thu Nov 22 22:58:55 2018 +0100
+
+    customization tests
+
+[33mcommit a9eb96844c9f556e4a20becaaa1d970890487019[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m
+Author: Alex Penin <alex.penin@grupoica.com>
+Date:   Thu Nov 22 17:53:00 2018 +0100
+
+    Refactor ContentCreatorRequest
+
+[33mcommit 4bfb871a0d3a19187c22ec2a4f3e50af003e30f6[m
+Author: Alex <alex.penin@grupoica.com>
+Date:   Thu Nov 22 00:00:10 2018 +0100
+
+    Refactor in progress, moving responsability of requests to the users that have the power to do it
+
+[33mcommit c9ab00234034d11696cbc623046d16bfb059f71f[m
+Author: Alex <alex.penin@grupoica.com>
+Date:   Wed Nov 21 21:18:19 2018 +0100
+
+    ContentCreatorRequest added
+
+[33mcommit 4224f56ee6802ef4b3f6587a48e77bc8c84fd629[m
+Author: Alex Penin <alex.penin@grupoica.com>
+Date:   Wed Nov 21 13:39:40 2018 +0100
+
+    Entity renaming for clarity
+
+[33mcommit fba51f7a7c82e2d680020aa43f7ddc315a073353[m
+Author: Alex Penin <alex.penin@grupoica.com>
+Date:   Wed Nov 21 12:38:06 2018 +0100
+
+    GetAllByFuncAsync implementation
+
+[33mcommit cc5b226a1d3e58b7b18c6677ee650be8752d26ce[m
+Author: Alex Penin <alex.penin@grupoica.com>
+Date:   Wed Nov 21 09:37:53 2018 +0100
+
+    Generic repository implementation and extra linq extensions
+
+[33mcommit 59b57f405faf8f38acbe6615076fda18a975fa7c[m
+Author: Alex <alex.penin@grupoica.com>
+Date:   Tue Nov 20 23:29:33 2018 +0100
+
+    Basic structure of the Infrastucture layer
+
+[33mcommit f587809f52f9aa9750815f7ae759203a9aaae783[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Alex <alex.penin@grupoica.com>
+Date:   Tue Nov 20 21:02:17 2018 +0100
+
+    Application Registration implementation with Autofac. Providers and Logger interceptor
+
+[33mcommit f4b8308fc2e2483e9231e2155f57c909473d5185[m
+Author: Alex <alex.penin@grupoica.com>
+Date:   Tue Nov 20 19:23:42 2018 +0100
+
+    IoC module settings by application layer
+
+[33mcommit 57921dbb0582436b25ed1d0f9c91ce53a572b609[m
+Author: Alex Penin <alex.penin@grupoica.com>
+Date:   Tue Nov 20 17:35:37 2018 +0100
+
+    Nugget packages added
+
+[33mcommit 671dd9dad3c598ea46c0058599e3cf6ff6ecca93[m
+Author: Alex Penin <alex.penin@grupoica.com>
+Date:   Tue Nov 20 12:47:19 2018 +0100
+
+    Application logger interception basic structure
+
+[33mcommit 60ad0236a95a3c9670ea8098838e084a9aff5dcd[m
+Author: Alex Penin <alex.penin@grupoica.com>
+Date:   Tue Nov 20 12:17:50 2018 +0100
+
+    Application test base and Create Student tests
+
+[33mcommit dab3207e03342ae16a081cb5bcc1668743ce5411[m
+Author: Alex <alex.penin@grupoica.com>
+Date:   Sun Nov 18 19:29:19 2018 +0100
+
+    CreateStudent Application service and Application.TDD base architecture
+
+[33mcommit 9de5c4ceceaf379c063f4ec2ea4eb13953c00d5f[m
+Author: Alex <alex.penin@grupoica.com>
+Date:   Sun Nov 18 18:21:33 2018 +0100
+
+    Core Contracts and Student provider
+
+[33mcommit 153b6a845125e86a6c475dbbdc2ffc488b0f9edf[m
+Author: Alex <alex.penin@grupoica.com>
+Date:   Sun Nov 18 12:20:41 2018 +0100
+
+    Courses added
+
+[33mcommit fabfe16d3a8f8fa581f6c770db4915de82c13d99[m
+Author: Alex <alex.penin@grupoica.com>
+Date:   Sun Nov 18 11:49:34 2018 +0100
+
+    Student entity
+
+[33mcommit 81eb490a4fa5dd3ea568e2be390485b4cbd8836a[m
+Author: Alex <alex.penin@grupoica.com>
+Date:   Sun Nov 18 11:38:11 2018 +0100
+
+    eLearn email added to teacher and refactor of email validations
+
+[33mcommit 05bc92592efc79226f01cbf59f3c3fddd601bbcf[m
+Author: Alex <alex.penin@grupoica.com>
+Date:   Sun Nov 18 02:18:37 2018 +0100
+
+    Domain Entity Teacher, value object Personalemail and it's validation
+
+[33mcommit 3dcc9d757de9261c74155b04a412fa7d243a0b87[m
+Author: Alex <alex.penin@grupoica.com>
+Date:   Sat Nov 17 23:32:47 2018 +0100
+
+    Domain ValueObject definition
+
+[33mcommit 840c6d969ab337ffbf5c067e3faa25832ad0156d[m
+Author: Alex <alex.penin@grupoica.com>
+Date:   Sat Nov 17 23:31:28 2018 +0100
+
+    Entity definition
+
+[33mcommit 6fcc9ddd4996be5b0d60b4ff85f5d757cc24ccaf[m
+Author: Alex <alex.penin@grupoica.com>
+Date:   Sat Nov 17 23:12:55 2018 +0100
+
+    Basic architecture setup
+
+[33mcommit a462bd888184c68aa5a4cc2188e61fab5a725eb7[m
+Author: alexpjj <alex.peninj@gmail.com>
+Date:   Sat Nov 17 19:00:17 2018 +0100
+
+    Initial commit

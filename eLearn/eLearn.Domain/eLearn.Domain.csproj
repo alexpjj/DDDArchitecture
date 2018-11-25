@@ -52,6 +52,7 @@
     <Compile Include="Entities\Base\ValueObject.cs" />
     <Compile Include="Entities\Content.cs" />
     <Compile Include="Entities\ContentCreatorRequest.cs" />
+    <Compile Include="Entities\ContentValidator.cs" />
     <Compile Include="Entities\Course.cs" />
     <Compile Include="Entities\Email.cs" />
     <Compile Include="Entities\PersonalEmail.cs" />
@@ -60,9 +61,12 @@
     <Compile Include="Entities\ContentCreator.cs" />
     <Compile Include="Enums\ValidationStatusType.cs" />
     <Compile Include="Exceptions\ELearnEmailValidationException.cs" />
+    <Compile Include="Exceptions\EntityNotFoundException.cs" />
     <Compile Include="Exceptions\InvalidDeclinedRequestException.cs" />
     <Compile Include="Exceptions\InvalidRequestCreationException.cs" />
     <Compile Include="Exceptions\PersonalEmailValidationException.cs" />
+    <Compile Include="Exceptions\RequestAssignmentException.cs" />
+    <Compile Include="Exceptions\RequestValidationException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

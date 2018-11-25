@@ -10,7 +10,7 @@ namespace eLearn.Domain.Entities
 {
     public class Email : Base.ValueObject<Email>
     {
-        public string ElectronicAdress { get; protected set; }
+        public string ElectronicAdress { get; set; }
 
 
         public Email(string electronicAdress)

@@ -8,24 +8,15 @@ namespace eLearn.Domain.Entities
 {
     public class ContentCreator : Base.Entity
     {
-        public PersonalEmail PersonalEmail { get; }
-        public ELearnEmail ProfessionalEmail { get; }
-        public string Name { get; }
-        public string Surname { get; }
-        public string Lastname { get; }
+        public PersonalEmail PersonalEmail { get; private set; }
+        public ELearnEmail ProfessionalEmail { get; private set; }
+        public string Name { get; private set; }
+        public string Surname { get; private set; }
+        public string Lastname { get; private set; }
 
         public virtual ContentCreatorRequest Request { get; private set; }
 
-        public virtual IEnumerable<Course> Courses { get; set; }
-
-        public ContentCreator(string name, string surname, string lastname, PersonalEmail personalEmail)
-        {
-            this.Name = name;
-            this.Surname = surname;
-            this.Lastname = lastname;
-            this.PersonalEmail = personalEmail;
-            this.Courses = new List<Course>();
-        }
+        public virtual IEnumerable<Course> Courses { get; set; }      
 
         public ContentCreator(string name, string surname, string lastname, string personalEmail)
         {

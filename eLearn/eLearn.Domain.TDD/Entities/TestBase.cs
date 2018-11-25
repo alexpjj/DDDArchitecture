@@ -1,5 +1,6 @@
 ﻿using AutoFixture;
-using eLearn.Domain.TDD.Configuration.AutoFixture;
+using AutoFixture.Kernel;
+using eLearn.Domain.Entities;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -21,9 +22,7 @@ namespace eLearn.Domain.TDD.Entities
 
         public void AutoFixtureConfiguration()
         {
-            this.fixture = new Fixture();
-
-            this.fixture.Customizations.Add(new EmailAdressSpecimen());
+            this.fixture = new Fixture();            
         }
 
         protected TClass Create<TClass>()
