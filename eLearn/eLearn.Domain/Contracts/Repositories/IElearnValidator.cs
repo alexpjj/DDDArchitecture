@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eLearn.Domain.Contracts.Repositories
 {
-    public interface IUserRepository : Core.IRepository<User, long>
+    public interface IElearnValidator : Core.IRepository<ElearnValidator, long>
     {
     }
 }

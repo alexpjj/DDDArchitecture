@@ -61,10 +61,11 @@
     <Compile Include="Extensions\LinqExtensions.cs" />
     <Compile Include="Migration\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ContentCreatorRepository.cs" />
+    <Compile Include="Repositories\ElearnValidatorRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\eLearn.Domain\eLearn.Domain.csproj">
       <Project>{4FD3B776-F45E-4B4E-8471-3B919C87AF5E}</Project>

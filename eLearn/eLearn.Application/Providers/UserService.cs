@@ -11,21 +11,21 @@ namespace eLearn.Application.Providers
 {
     public class UserService : Contracts.IUserService
     {
-        private readonly IUserRepository studentRepository;
+        private readonly IUserRepository userRepository;
 
-        public UserService(IUserRepository studentRepository)
+        public UserService(IUserRepository userRepository)
         {
-            this.studentRepository = studentRepository;
+            this.userRepository = userRepository;
         }
 
         public async Task<long> Create(CreateUserDto studentDto)
         {
-            var student = new User(studentDto.Name, studentDto.Surname, studentDto.Lastname, studentDto.Email);
+            var user = new User(studentDto.Name, studentDto.Surname, studentDto.Lastname, studentDto.Email);
 
-            this.studentRepository.Create(student);
-            await this.studentRepository.IUnitOfWork.CommitAsync().ConfigureAwait(false);
+            this.userRepository.Create(user);
+            await this.userRepository.IUnitOfWork.CommitAsync().ConfigureAwait(false);
 
-            return student.Id;
+            return user.Id;
         }
 
         public Task Delete(long id)

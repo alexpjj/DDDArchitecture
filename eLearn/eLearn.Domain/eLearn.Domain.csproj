@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\Repositories\IContentCreatorRepository.cs" />
+    <Compile Include="Contracts\Repositories\IElearnValidator.cs" />
     <Compile Include="Contracts\Repositories\IUserRepository.cs" />
     <Compile Include="Core\IRepository.cs" />
     <Compile Include="Core\IUnitOfWork.cs" />
