@@ -10,9 +10,11 @@ namespace eLearn.Domain.Entities
 {
     public class ContentCreatorRequest : Base.ValueObject<ContentCreatorRequest>
     {
-        public RequestStatus Status { get; private set; }
+        public ContentCreator ContentCreator { get; private set; }
         public long ContentCreatorId { get; private set; }
+        public RequestStatus Status { get; private set; }        
         public string PetitionDescription { get; private set; }
+        public ElearnValidator Validator { get; set; }
         public long? ValidatorId { get; private set; }
         public string ValidationDescription { get; set; }
 

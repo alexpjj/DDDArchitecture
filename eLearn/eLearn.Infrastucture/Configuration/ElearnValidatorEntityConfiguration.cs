@@ -12,7 +12,9 @@ namespace eLearn.Infrastucture.Configuration
     {
         public ElearnValidatorEntityConfiguration()
         {
-            this.HasKey(x => x.Id);            
+            this.HasKey(x => x.Id);
+
+            this.HasMany(x => x.Requests).WithOptional(x => x.Validator).HasForeignKey(x => x.ValidatorId);
         }
     }
 }

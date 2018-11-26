@@ -15,11 +15,14 @@ namespace eLearn.Infrastucture.Configuration
             this.HasKey(x => x.Id);
             this.Property(x => x.Id).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
 
-            this.Property(x => x.Name).HasColumnName("Name");
-            this.Property(x => x.Surname).HasColumnName("Surname");
-            this.Property(x => x.Lastname).HasColumnName("Lastname");
-            this.Property(x => x.PersonalEmail.ElectronicAdress).HasColumnName("PersonalEmail");
+            this.Property(x => x.Name).IsRequired();
+            this.Property(x => x.Surname).IsRequired();
+            this.Property(x => x.Lastname).IsRequired();
+            this.Property(x => x.PersonalEmail.ElectronicAdress).IsRequired().HasColumnName("PersonalEmail");
             this.Property(x => x.ProfessionalEmail.ElectronicAdress).HasColumnName("ElearnEmail");
+
+            this.HasOptional(x => x.Request).WithRequired(x => x.ContentCreator);
+            this.Ignore(x => x.Courses);
         }
     }
 }
