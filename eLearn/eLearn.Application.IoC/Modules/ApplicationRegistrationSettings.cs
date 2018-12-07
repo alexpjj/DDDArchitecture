@@ -8,6 +8,7 @@ using Autofac.Extras.DynamicProxy;
 using System.Reflection;
 using eLearn.Application.IoC;
 using log4net;
+using eLearn.Application.IoC.Interceptors;
 
 namespace eLearn.Application.IoC.Modules
 {
@@ -25,9 +26,15 @@ namespace eLearn.Application.IoC.Modules
             Assembly providersAssembly = typeof(DTO.CreateUserDto).Assembly;
 
             builder.RegisterAssemblyTypes(providersAssembly)
+               .Where(x => typeof(FluentValidation.IValidator).IsAssignableFrom(x))
+               .AsImplementedInterfaces()
+               .Keyed<FluentValidation.IValidator>(x => x.BaseType.GenericTypeArguments[0])
+               .SingleInstance();
+
+            builder.RegisterAssemblyTypes(providersAssembly)
                .Where(x => typeof(Providers.UserService).IsAssignableFrom(x))
                .EnableInterfaceInterceptors()
-               .InterceptedBy(typeof(Interceptors.Logger))
+               .InterceptedBy(typeof(Interceptors.Logger), typeof(Validation))
                .OnPreparing(x =>
                {
                    x.Parameters = x.Parameters.Union(new[]
@@ -42,6 +49,7 @@ namespace eLearn.Application.IoC.Modules
                 .SingleInstance();
 
             builder.RegisterType<Interceptors.Logger>();
+            builder.RegisterType<Interceptors.Validation>();
 
             base.Load(builder);
         }
